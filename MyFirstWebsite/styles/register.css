@@ -1,0 +1,22 @@
+﻿*{
+    margin:0;
+    padding:0;
+}
+section{
+    background-image:url("Images/bg-education-library.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container{
+    width:47vw;
+    height:57vh;
+    background-image:url("Images/bg-education-library.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    position:relative;
+}

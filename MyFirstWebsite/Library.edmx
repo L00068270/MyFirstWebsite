@@ -1,0 +1,900 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LibraryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BookNumber">
+          <Key>
+            <PropertyRef Name="BookID" />
+          </Key>
+          <Property Name="BookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShelfNumber" Type="int" Nullable="false" />
+          <Property Name="Condition" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Books">
+          <Key>
+            <PropertyRef Name="ISBN" />
+          </Key>
+          <Property Name="ISBN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="Author" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CopiesTotal" Type="int" Nullable="false" />
+          <Property Name="CopiesAvailable" Type="int" Nullable="false" />
+          <Property Name="CopiesOut" Type="int" Nullable="false" />
+          <Property Name="SubjectArea" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="YearOfPublication" Type="date" Nullable="false" />
+          <Property Name="Keyword" Type="varchar" MaxLength="30" />
+          <Property Name="PublisherID" Type="int" />
+        </EntityType>
+        <EntityType Name="ConferenceProceedings">
+          <Key>
+            <PropertyRef Name="ConferenceProID" />
+          </Key>
+          <Property Name="ConferenceProID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CopiesTotal" Type="int" Nullable="false" />
+          <Property Name="CopiesAvailable" Type="int" Nullable="false" />
+          <Property Name="CopiesOut" Type="int" Nullable="false" />
+          <Property Name="SubjectArea" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="YearOfPublication" Type="date" Nullable="false" />
+          <Property Name="Keyword" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ConferenceProCopy">
+          <Key>
+            <PropertyRef Name="ConferenceNumID" />
+          </Key>
+          <Property Name="ConferenceNumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShelfNumber" Type="int" Nullable="false" />
+          <Property Name="Condition" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="ConferenceProID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DVDNumber">
+          <Key>
+            <PropertyRef Name="DVDNumberID" />
+          </Key>
+          <Property Name="DVDNumberID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShelfNumber" Type="int" Nullable="false" />
+          <Property Name="Condition" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DVDID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DVDs">
+          <Key>
+            <PropertyRef Name="DVDID" />
+          </Key>
+          <Property Name="DVDID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Producer" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CopiesTotal" Type="int" Nullable="false" />
+          <Property Name="CopiesAvailable" Type="int" Nullable="false" />
+          <Property Name="CopiesOut" Type="int" Nullable="false" />
+          <Property Name="SubjectArea" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="YearOfPublication" Type="date" Nullable="false" />
+          <Property Name="Keyword" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="ItemsID" />
+          </Key>
+          <Property Name="ItemsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateBorrowed" Type="date" Nullable="false" />
+          <Property Name="DateDue" Type="date" Nullable="false" />
+          <Property Name="DateReturned" Type="date" />
+          <Property Name="OverDueChargeDay" Type="money" Nullable="false" />
+          <Property Name="OverDueChargeHour" Type="money" Nullable="false" />
+          <Property Name="TransactionTotal" Type="money" Nullable="false" />
+          <Property Name="DatePickup" Type="date" />
+        </EntityType>
+        <EntityType Name="JournalNumber">
+          <Key>
+            <PropertyRef Name="JournalNumberID" />
+          </Key>
+          <Property Name="JournalNumberID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShelfNumber" Type="int" Nullable="false" />
+          <Property Name="Condition" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="JournalID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Journals">
+          <Key>
+            <PropertyRef Name="JournalID" />
+          </Key>
+          <Property Name="JournalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ResearchSociety" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CopiesTotal" Type="int" Nullable="false" />
+          <Property Name="CopiesAvailable" Type="int" Nullable="false" />
+          <Property Name="CopiesOut" Type="int" Nullable="false" />
+          <Property Name="SubjectArea" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="YearOfPublication" Type="date" Nullable="false" />
+          <Property Name="Keyword" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LibraryMember">
+          <Key>
+            <PropertyRef Name="MemberID" />
+          </Key>
+          <Property Name="MemberID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameFirst" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="NameInitial" Type="varchar" MaxLength="30" />
+          <Property Name="NameLast" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="30" />
+          <Property Name="Password" Type="varchar" MaxLength="30" />
+          <Property Name="Address" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Street" Type="varchar" MaxLength="30" />
+          <Property Name="Town" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="County" Type="varchar" MaxLength="30" />
+          <Property Name="Country" Type="varchar" MaxLength="30" />
+          <Property Name="Postcode" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Classification" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MemberHistories">
+          <Key>
+            <PropertyRef Name="HistoryID" />
+          </Key>
+          <Property Name="HistoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemsID" Type="int" />
+          <Property Name="MemberID" Type="int" />
+          <Property Name="ISBN" Type="int" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Publisher">
+          <Key>
+            <PropertyRef Name="PublisherID" />
+          </Key>
+          <Property Name="PublisherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Publisher" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactNumber" Type="int" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="Street" Type="varchar" MaxLength="100" />
+          <Property Name="Town" Type="varchar" MaxLength="100" />
+          <Property Name="County" Type="varchar" MaxLength="100" />
+          <Property Name="Country" Type="varchar" MaxLength="100" />
+          <Property Name="PostCode" Type="varchar" MaxLength="100" />
+          <Property Name="PaidOut" Type="money" />
+          <Property Name="AccountNumber" Type="int" />
+        </EntityType>
+        <EntityType Name="ReferenceBookCopy">
+          <Key>
+            <PropertyRef Name="RefBookNumID" />
+          </Key>
+          <Property Name="RefBookNumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShelfNumber" Type="int" Nullable="false" />
+          <Property Name="Condition" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="RefBookID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ReferenceBooks">
+          <Key>
+            <PropertyRef Name="RefBookID" />
+          </Key>
+          <Property Name="RefBookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CopiesTotal" Type="int" Nullable="false" />
+          <Property Name="CopiesAvailable" Type="int" Nullable="false" />
+          <Property Name="CopiesOut" Type="int" Nullable="false" />
+          <Property Name="SubjectArea" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="YearOfPublication" Type="date" Nullable="false" />
+          <Property Name="Keyword" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Library.dbo.Users' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Users">
+          <Property Name="UserID" Type="int" />
+          <Property Name="FirstName" Type="varchar" MaxLength="255" />
+          <Property Name="LastName" Type="varchar" MaxLength="255" />
+          <Property Name="Username" Type="varchar" MaxLength="255" />
+          <Property Name="Password" Type="varchar" MaxLength="255" />
+        </EntityType>-->
+        <Association Name="FK__Conferenc__Confe__60A75C0F">
+          <End Role="ConferenceProceedings" Type="Self.ConferenceProceedings" Multiplicity="1" />
+          <End Role="ConferenceProCopy" Type="Self.ConferenceProCopy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ConferenceProceedings">
+              <PropertyRef Name="ConferenceProID" />
+            </Principal>
+            <Dependent Role="ConferenceProCopy">
+              <PropertyRef Name="ConferenceProID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DVDNumber__DVDID__59063A47">
+          <End Role="DVDs" Type="Self.DVDs" Multiplicity="1" />
+          <End Role="DVDNumber" Type="Self.DVDNumber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DVDs">
+              <PropertyRef Name="DVDID" />
+            </Principal>
+            <Dependent Role="DVDNumber">
+              <PropertyRef Name="DVDID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__JournalNu__Journ__52593CB8">
+          <End Role="Journals" Type="Self.Journals" Multiplicity="1" />
+          <End Role="JournalNumber" Type="Self.JournalNumber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Journals">
+              <PropertyRef Name="JournalID" />
+            </Principal>
+            <Dependent Role="JournalNumber">
+              <PropertyRef Name="JournalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemberHis__Items__02FC7413">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="MemberHistories" Type="Self.MemberHistories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="ItemsID" />
+            </Principal>
+            <Dependent Role="MemberHistories">
+              <PropertyRef Name="ItemsID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemberHis__Membe__03F0984C">
+          <End Role="LibraryMember" Type="Self.LibraryMember" Multiplicity="0..1" />
+          <End Role="MemberHistories" Type="Self.MemberHistories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LibraryMember">
+              <PropertyRef Name="MemberID" />
+            </Principal>
+            <Dependent Role="MemberHistories">
+              <PropertyRef Name="MemberID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemberHist__ISBN__04E4BC85">
+          <End Role="Books" Type="Self.Books" Multiplicity="0..1" />
+          <End Role="MemberHistories" Type="Self.MemberHistories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Books">
+              <PropertyRef Name="ISBN" />
+            </Principal>
+            <Dependent Role="MemberHistories">
+              <PropertyRef Name="ISBN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reference__RefBo__68487DD7">
+          <End Role="ReferenceBooks" Type="Self.ReferenceBooks" Multiplicity="1" />
+          <End Role="ReferenceBookCopy" Type="Self.ReferenceBookCopy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReferenceBooks">
+              <PropertyRef Name="RefBookID" />
+            </Principal>
+            <Dependent Role="ReferenceBookCopy">
+              <PropertyRef Name="RefBookID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Books_Publisher_PublisherID">
+          <End Role="Publisher" Type="Self.Publisher" Multiplicity="0..1" />
+          <End Role="Books" Type="Self.Books" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Publisher">
+              <PropertyRef Name="PublisherID" />
+            </Principal>
+            <Dependent Role="Books">
+              <PropertyRef Name="PublisherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LibraryModelStoreContainer">
+          <EntitySet Name="BookNumber" EntityType="Self.BookNumber" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ConferenceProceedings" EntityType="Self.ConferenceProceedings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ConferenceProCopy" EntityType="Self.ConferenceProCopy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DVDNumber" EntityType="Self.DVDNumber" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DVDs" EntityType="Self.DVDs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JournalNumber" EntityType="Self.JournalNumber" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Journals" EntityType="Self.Journals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LibraryMember" EntityType="Self.LibraryMember" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MemberHistories" EntityType="Self.MemberHistories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Publisher" EntityType="Self.Publisher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReferenceBookCopy" EntityType="Self.ReferenceBookCopy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReferenceBooks" EntityType="Self.ReferenceBooks" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Conferenc__Confe__60A75C0F" Association="Self.FK__Conferenc__Confe__60A75C0F">
+            <End Role="ConferenceProceedings" EntitySet="ConferenceProceedings" />
+            <End Role="ConferenceProCopy" EntitySet="ConferenceProCopy" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DVDNumber__DVDID__59063A47" Association="Self.FK__DVDNumber__DVDID__59063A47">
+            <End Role="DVDs" EntitySet="DVDs" />
+            <End Role="DVDNumber" EntitySet="DVDNumber" />
+          </AssociationSet>
+          <AssociationSet Name="FK__JournalNu__Journ__52593CB8" Association="Self.FK__JournalNu__Journ__52593CB8">
+            <End Role="Journals" EntitySet="Journals" />
+            <End Role="JournalNumber" EntitySet="JournalNumber" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemberHis__Items__02FC7413" Association="Self.FK__MemberHis__Items__02FC7413">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="MemberHistories" EntitySet="MemberHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemberHis__Membe__03F0984C" Association="Self.FK__MemberHis__Membe__03F0984C">
+            <End Role="LibraryMember" EntitySet="LibraryMember" />
+            <End Role="MemberHistories" EntitySet="MemberHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemberHist__ISBN__04E4BC85" Association="Self.FK__MemberHist__ISBN__04E4BC85">
+            <End Role="Books" EntitySet="Books" />
+            <End Role="MemberHistories" EntitySet="MemberHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reference__RefBo__68487DD7" Association="Self.FK__Reference__RefBo__68487DD7">
+            <End Role="ReferenceBooks" EntitySet="ReferenceBooks" />
+            <End Role="ReferenceBookCopy" EntitySet="ReferenceBookCopy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Books_Publisher_PublisherID" Association="Self.FK_Books_Publisher_PublisherID">
+            <End Role="Publisher" EntitySet="Publisher" />
+            <End Role="Books" EntitySet="Books" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LibraryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BookNumber">
+          <Key>
+            <PropertyRef Name="BookID" />
+          </Key>
+          <Property Name="BookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShelfNumber" Type="Int32" Nullable="false" />
+          <Property Name="Condition" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="ISBN" />
+          </Key>
+          <Property Name="ISBN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Author" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CopiesTotal" Type="Int32" Nullable="false" />
+          <Property Name="CopiesAvailable" Type="Int32" Nullable="false" />
+          <Property Name="CopiesOut" Type="Int32" Nullable="false" />
+          <Property Name="SubjectArea" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="YearOfPublication" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Keyword" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="PublisherID" Type="Int32" />
+          <NavigationProperty Name="MemberHistories" Relationship="Self.FK__MemberHist__ISBN__04E4BC85" FromRole="Books" ToRole="MemberHistories" />
+          <NavigationProperty Name="Publisher" Relationship="Self.FK_Books_Publisher_PublisherID" FromRole="Books" ToRole="Publisher" />
+        </EntityType>
+        <EntityType Name="ConferenceProceeding">
+          <Key>
+            <PropertyRef Name="ConferenceProID" />
+          </Key>
+          <Property Name="ConferenceProID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CopiesTotal" Type="Int32" Nullable="false" />
+          <Property Name="CopiesAvailable" Type="Int32" Nullable="false" />
+          <Property Name="CopiesOut" Type="Int32" Nullable="false" />
+          <Property Name="SubjectArea" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="YearOfPublication" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Keyword" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ConferenceProCopies" Relationship="Self.FK__Conferenc__Confe__60A75C0F" FromRole="ConferenceProceedings" ToRole="ConferenceProCopy" />
+        </EntityType>
+        <EntityType Name="ConferenceProCopy">
+          <Key>
+            <PropertyRef Name="ConferenceNumID" />
+          </Key>
+          <Property Name="ConferenceNumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShelfNumber" Type="Int32" Nullable="false" />
+          <Property Name="Condition" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ConferenceProID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ConferenceProceeding" Relationship="Self.FK__Conferenc__Confe__60A75C0F" FromRole="ConferenceProCopy" ToRole="ConferenceProceedings" />
+        </EntityType>
+        <EntityType Name="DVDNumber">
+          <Key>
+            <PropertyRef Name="DVDNumberID" />
+          </Key>
+          <Property Name="DVDNumberID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShelfNumber" Type="Int32" Nullable="false" />
+          <Property Name="Condition" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DVDID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="DVD" Relationship="Self.FK__DVDNumber__DVDID__59063A47" FromRole="DVDNumber" ToRole="DVDs" />
+        </EntityType>
+        <EntityType Name="DVD">
+          <Key>
+            <PropertyRef Name="DVDID" />
+          </Key>
+          <Property Name="DVDID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Producer" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CopiesTotal" Type="Int32" Nullable="false" />
+          <Property Name="CopiesAvailable" Type="Int32" Nullable="false" />
+          <Property Name="CopiesOut" Type="Int32" Nullable="false" />
+          <Property Name="SubjectArea" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="YearOfPublication" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Keyword" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="DVDNumbers" Relationship="Self.FK__DVDNumber__DVDID__59063A47" FromRole="DVDs" ToRole="DVDNumber" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="ItemsID" />
+          </Key>
+          <Property Name="ItemsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateBorrowed" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DateDue" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DateReturned" Type="DateTime" Precision="0" />
+          <Property Name="OverDueChargeDay" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="OverDueChargeHour" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="TransactionTotal" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="DatePickup" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="MemberHistories" Relationship="Self.FK__MemberHis__Items__02FC7413" FromRole="Items" ToRole="MemberHistories" />
+        </EntityType>
+        <EntityType Name="JournalNumber">
+          <Key>
+            <PropertyRef Name="JournalNumberID" />
+          </Key>
+          <Property Name="JournalNumberID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShelfNumber" Type="Int32" Nullable="false" />
+          <Property Name="Condition" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="JournalID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Journal" Relationship="Self.FK__JournalNu__Journ__52593CB8" FromRole="JournalNumber" ToRole="Journals" />
+        </EntityType>
+        <EntityType Name="Journal">
+          <Key>
+            <PropertyRef Name="JournalID" />
+          </Key>
+          <Property Name="JournalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ResearchSociety" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CopiesTotal" Type="Int32" Nullable="false" />
+          <Property Name="CopiesAvailable" Type="Int32" Nullable="false" />
+          <Property Name="CopiesOut" Type="Int32" Nullable="false" />
+          <Property Name="SubjectArea" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="YearOfPublication" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Keyword" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="JournalNumbers" Relationship="Self.FK__JournalNu__Journ__52593CB8" FromRole="Journals" ToRole="JournalNumber" />
+        </EntityType>
+        <EntityType Name="LibraryMember">
+          <Key>
+            <PropertyRef Name="MemberID" />
+          </Key>
+          <Property Name="MemberID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameFirst" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NameInitial" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="NameLast" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Street" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Town" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="County" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Postcode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Classification" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MemberHistories" Relationship="Self.FK__MemberHis__Membe__03F0984C" FromRole="LibraryMember" ToRole="MemberHistories" />
+        </EntityType>
+        <EntityType Name="MemberHistory">
+          <Key>
+            <PropertyRef Name="HistoryID" />
+          </Key>
+          <Property Name="HistoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemsID" Type="Int32" />
+          <Property Name="MemberID" Type="Int32" />
+          <Property Name="ISBN" Type="Int32" />
+          <NavigationProperty Name="Book" Relationship="Self.FK__MemberHist__ISBN__04E4BC85" FromRole="MemberHistories" ToRole="Books" />
+          <NavigationProperty Name="Item" Relationship="Self.FK__MemberHis__Items__02FC7413" FromRole="MemberHistories" ToRole="Items" />
+          <NavigationProperty Name="LibraryMember" Relationship="Self.FK__MemberHis__Membe__03F0984C" FromRole="MemberHistories" ToRole="LibraryMember" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Publisher">
+          <Key>
+            <PropertyRef Name="PublisherID" />
+          </Key>
+          <Property Name="PublisherID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Publisher1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ContactNumber" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Street" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Town" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="County" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PostCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PaidOut" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="AccountNumber" Type="Int32" />
+          <NavigationProperty Name="Books" Relationship="Self.FK_Books_Publisher_PublisherID" FromRole="Publisher" ToRole="Books" />
+        </EntityType>
+        <EntityType Name="ReferenceBookCopy">
+          <Key>
+            <PropertyRef Name="RefBookNumID" />
+          </Key>
+          <Property Name="RefBookNumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShelfNumber" Type="Int32" Nullable="false" />
+          <Property Name="Condition" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RefBookID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ReferenceBook" Relationship="Self.FK__Reference__RefBo__68487DD7" FromRole="ReferenceBookCopy" ToRole="ReferenceBooks" />
+        </EntityType>
+        <EntityType Name="ReferenceBook">
+          <Key>
+            <PropertyRef Name="RefBookID" />
+          </Key>
+          <Property Name="RefBookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CopiesTotal" Type="Int32" Nullable="false" />
+          <Property Name="CopiesAvailable" Type="Int32" Nullable="false" />
+          <Property Name="CopiesOut" Type="Int32" Nullable="false" />
+          <Property Name="SubjectArea" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="YearOfPublication" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Keyword" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ReferenceBookCopies" Relationship="Self.FK__Reference__RefBo__68487DD7" FromRole="ReferenceBooks" ToRole="ReferenceBookCopy" />
+        </EntityType>
+        <Association Name="FK__MemberHist__ISBN__04E4BC85">
+          <End Role="Books" Type="Self.Book" Multiplicity="0..1" />
+          <End Role="MemberHistories" Type="Self.MemberHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Books">
+              <PropertyRef Name="ISBN" />
+            </Principal>
+            <Dependent Role="MemberHistories">
+              <PropertyRef Name="ISBN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Books_Publisher_PublisherID">
+          <End Role="Publisher" Type="Self.Publisher" Multiplicity="0..1" />
+          <End Role="Books" Type="Self.Book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Publisher">
+              <PropertyRef Name="PublisherID" />
+            </Principal>
+            <Dependent Role="Books">
+              <PropertyRef Name="PublisherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Conferenc__Confe__60A75C0F">
+          <End Role="ConferenceProceedings" Type="Self.ConferenceProceeding" Multiplicity="1" />
+          <End Role="ConferenceProCopy" Type="Self.ConferenceProCopy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ConferenceProceedings">
+              <PropertyRef Name="ConferenceProID" />
+            </Principal>
+            <Dependent Role="ConferenceProCopy">
+              <PropertyRef Name="ConferenceProID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DVDNumber__DVDID__59063A47">
+          <End Role="DVDs" Type="Self.DVD" Multiplicity="1" />
+          <End Role="DVDNumber" Type="Self.DVDNumber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DVDs">
+              <PropertyRef Name="DVDID" />
+            </Principal>
+            <Dependent Role="DVDNumber">
+              <PropertyRef Name="DVDID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemberHis__Items__02FC7413">
+          <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
+          <End Role="MemberHistories" Type="Self.MemberHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="ItemsID" />
+            </Principal>
+            <Dependent Role="MemberHistories">
+              <PropertyRef Name="ItemsID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__JournalNu__Journ__52593CB8">
+          <End Role="Journals" Type="Self.Journal" Multiplicity="1" />
+          <End Role="JournalNumber" Type="Self.JournalNumber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Journals">
+              <PropertyRef Name="JournalID" />
+            </Principal>
+            <Dependent Role="JournalNumber">
+              <PropertyRef Name="JournalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemberHis__Membe__03F0984C">
+          <End Role="LibraryMember" Type="Self.LibraryMember" Multiplicity="0..1" />
+          <End Role="MemberHistories" Type="Self.MemberHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LibraryMember">
+              <PropertyRef Name="MemberID" />
+            </Principal>
+            <Dependent Role="MemberHistories">
+              <PropertyRef Name="MemberID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reference__RefBo__68487DD7">
+          <End Role="ReferenceBooks" Type="Self.ReferenceBook" Multiplicity="1" />
+          <End Role="ReferenceBookCopy" Type="Self.ReferenceBookCopy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReferenceBooks">
+              <PropertyRef Name="RefBookID" />
+            </Principal>
+            <Dependent Role="ReferenceBookCopy">
+              <PropertyRef Name="RefBookID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Library" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BookNumbers" EntityType="Self.BookNumber" />
+          <EntitySet Name="Books" EntityType="Self.Book" />
+          <EntitySet Name="ConferenceProceedings" EntityType="Self.ConferenceProceeding" />
+          <EntitySet Name="ConferenceProCopies" EntityType="Self.ConferenceProCopy" />
+          <EntitySet Name="DVDNumbers" EntityType="Self.DVDNumber" />
+          <EntitySet Name="DVDs" EntityType="Self.DVD" />
+          <EntitySet Name="Items" EntityType="Self.Item" />
+          <EntitySet Name="JournalNumbers" EntityType="Self.JournalNumber" />
+          <EntitySet Name="Journals" EntityType="Self.Journal" />
+          <EntitySet Name="LibraryMembers" EntityType="Self.LibraryMember" />
+          <EntitySet Name="MemberHistories" EntityType="Self.MemberHistory" />
+          <EntitySet Name="Orders" EntityType="Self.Order" />
+          <EntitySet Name="Publishers" EntityType="Self.Publisher" />
+          <EntitySet Name="ReferenceBookCopies" EntityType="Self.ReferenceBookCopy" />
+          <EntitySet Name="ReferenceBooks" EntityType="Self.ReferenceBook" />
+          <AssociationSet Name="FK__MemberHist__ISBN__04E4BC85" Association="Self.FK__MemberHist__ISBN__04E4BC85">
+            <End Role="Books" EntitySet="Books" />
+            <End Role="MemberHistories" EntitySet="MemberHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Books_Publisher_PublisherID" Association="Self.FK_Books_Publisher_PublisherID">
+            <End Role="Publisher" EntitySet="Publishers" />
+            <End Role="Books" EntitySet="Books" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Conferenc__Confe__60A75C0F" Association="Self.FK__Conferenc__Confe__60A75C0F">
+            <End Role="ConferenceProceedings" EntitySet="ConferenceProceedings" />
+            <End Role="ConferenceProCopy" EntitySet="ConferenceProCopies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DVDNumber__DVDID__59063A47" Association="Self.FK__DVDNumber__DVDID__59063A47">
+            <End Role="DVDs" EntitySet="DVDs" />
+            <End Role="DVDNumber" EntitySet="DVDNumbers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemberHis__Items__02FC7413" Association="Self.FK__MemberHis__Items__02FC7413">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="MemberHistories" EntitySet="MemberHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__JournalNu__Journ__52593CB8" Association="Self.FK__JournalNu__Journ__52593CB8">
+            <End Role="Journals" EntitySet="Journals" />
+            <End Role="JournalNumber" EntitySet="JournalNumbers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemberHis__Membe__03F0984C" Association="Self.FK__MemberHis__Membe__03F0984C">
+            <End Role="LibraryMember" EntitySet="LibraryMembers" />
+            <End Role="MemberHistories" EntitySet="MemberHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reference__RefBo__68487DD7" Association="Self.FK__Reference__RefBo__68487DD7">
+            <End Role="ReferenceBooks" EntitySet="ReferenceBooks" />
+            <End Role="ReferenceBookCopy" EntitySet="ReferenceBookCopies" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LibraryModelStoreContainer" CdmEntityContainer="Library">
+          <EntitySetMapping Name="BookNumbers">
+            <EntityTypeMapping TypeName="LibraryModel.BookNumber">
+              <MappingFragment StoreEntitySet="BookNumber">
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
+                <ScalarProperty Name="ShelfNumber" ColumnName="ShelfNumber" />
+                <ScalarProperty Name="Condition" ColumnName="Condition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Books">
+            <EntityTypeMapping TypeName="LibraryModel.Book">
+              <MappingFragment StoreEntitySet="Books">
+                <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="CopiesTotal" ColumnName="CopiesTotal" />
+                <ScalarProperty Name="CopiesAvailable" ColumnName="CopiesAvailable" />
+                <ScalarProperty Name="CopiesOut" ColumnName="CopiesOut" />
+                <ScalarProperty Name="SubjectArea" ColumnName="SubjectArea" />
+                <ScalarProperty Name="YearOfPublication" ColumnName="YearOfPublication" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+                <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ConferenceProceedings">
+            <EntityTypeMapping TypeName="LibraryModel.ConferenceProceeding">
+              <MappingFragment StoreEntitySet="ConferenceProceedings">
+                <ScalarProperty Name="ConferenceProID" ColumnName="ConferenceProID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="CopiesTotal" ColumnName="CopiesTotal" />
+                <ScalarProperty Name="CopiesAvailable" ColumnName="CopiesAvailable" />
+                <ScalarProperty Name="CopiesOut" ColumnName="CopiesOut" />
+                <ScalarProperty Name="SubjectArea" ColumnName="SubjectArea" />
+                <ScalarProperty Name="YearOfPublication" ColumnName="YearOfPublication" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ConferenceProCopies">
+            <EntityTypeMapping TypeName="LibraryModel.ConferenceProCopy">
+              <MappingFragment StoreEntitySet="ConferenceProCopy">
+                <ScalarProperty Name="ConferenceNumID" ColumnName="ConferenceNumID" />
+                <ScalarProperty Name="ShelfNumber" ColumnName="ShelfNumber" />
+                <ScalarProperty Name="Condition" ColumnName="Condition" />
+                <ScalarProperty Name="ConferenceProID" ColumnName="ConferenceProID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DVDNumbers">
+            <EntityTypeMapping TypeName="LibraryModel.DVDNumber">
+              <MappingFragment StoreEntitySet="DVDNumber">
+                <ScalarProperty Name="DVDNumberID" ColumnName="DVDNumberID" />
+                <ScalarProperty Name="ShelfNumber" ColumnName="ShelfNumber" />
+                <ScalarProperty Name="Condition" ColumnName="Condition" />
+                <ScalarProperty Name="DVDID" ColumnName="DVDID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DVDs">
+            <EntityTypeMapping TypeName="LibraryModel.DVD">
+              <MappingFragment StoreEntitySet="DVDs">
+                <ScalarProperty Name="DVDID" ColumnName="DVDID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Producer" ColumnName="Producer" />
+                <ScalarProperty Name="CopiesTotal" ColumnName="CopiesTotal" />
+                <ScalarProperty Name="CopiesAvailable" ColumnName="CopiesAvailable" />
+                <ScalarProperty Name="CopiesOut" ColumnName="CopiesOut" />
+                <ScalarProperty Name="SubjectArea" ColumnName="SubjectArea" />
+                <ScalarProperty Name="YearOfPublication" ColumnName="YearOfPublication" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="LibraryModel.Item">
+              <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="ItemsID" ColumnName="ItemsID" />
+                <ScalarProperty Name="DateBorrowed" ColumnName="DateBorrowed" />
+                <ScalarProperty Name="DateDue" ColumnName="DateDue" />
+                <ScalarProperty Name="DateReturned" ColumnName="DateReturned" />
+                <ScalarProperty Name="OverDueChargeDay" ColumnName="OverDueChargeDay" />
+                <ScalarProperty Name="OverDueChargeHour" ColumnName="OverDueChargeHour" />
+                <ScalarProperty Name="TransactionTotal" ColumnName="TransactionTotal" />
+                <ScalarProperty Name="DatePickup" ColumnName="DatePickup" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JournalNumbers">
+            <EntityTypeMapping TypeName="LibraryModel.JournalNumber">
+              <MappingFragment StoreEntitySet="JournalNumber">
+                <ScalarProperty Name="JournalNumberID" ColumnName="JournalNumberID" />
+                <ScalarProperty Name="ShelfNumber" ColumnName="ShelfNumber" />
+                <ScalarProperty Name="Condition" ColumnName="Condition" />
+                <ScalarProperty Name="JournalID" ColumnName="JournalID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Journals">
+            <EntityTypeMapping TypeName="LibraryModel.Journal">
+              <MappingFragment StoreEntitySet="Journals">
+                <ScalarProperty Name="JournalID" ColumnName="JournalID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ResearchSociety" ColumnName="ResearchSociety" />
+                <ScalarProperty Name="CopiesTotal" ColumnName="CopiesTotal" />
+                <ScalarProperty Name="CopiesAvailable" ColumnName="CopiesAvailable" />
+                <ScalarProperty Name="CopiesOut" ColumnName="CopiesOut" />
+                <ScalarProperty Name="SubjectArea" ColumnName="SubjectArea" />
+                <ScalarProperty Name="YearOfPublication" ColumnName="YearOfPublication" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LibraryMembers">
+            <EntityTypeMapping TypeName="LibraryModel.LibraryMember">
+              <MappingFragment StoreEntitySet="LibraryMember">
+                <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+                <ScalarProperty Name="NameFirst" ColumnName="NameFirst" />
+                <ScalarProperty Name="NameInitial" ColumnName="NameInitial" />
+                <ScalarProperty Name="NameLast" ColumnName="NameLast" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="Town" ColumnName="Town" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+                <ScalarProperty Name="Classification" ColumnName="Classification" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MemberHistories">
+            <EntityTypeMapping TypeName="LibraryModel.MemberHistory">
+              <MappingFragment StoreEntitySet="MemberHistories">
+                <ScalarProperty Name="HistoryID" ColumnName="HistoryID" />
+                <ScalarProperty Name="ItemsID" ColumnName="ItemsID" />
+                <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+                <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="LibraryModel.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Publishers">
+            <EntityTypeMapping TypeName="LibraryModel.Publisher">
+              <MappingFragment StoreEntitySet="Publisher">
+                <ScalarProperty Name="PublisherID" ColumnName="PublisherID" />
+                <ScalarProperty Name="Publisher1" ColumnName="Publisher" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="Town" ColumnName="Town" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="PaidOut" ColumnName="PaidOut" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReferenceBookCopies">
+            <EntityTypeMapping TypeName="LibraryModel.ReferenceBookCopy">
+              <MappingFragment StoreEntitySet="ReferenceBookCopy">
+                <ScalarProperty Name="RefBookNumID" ColumnName="RefBookNumID" />
+                <ScalarProperty Name="ShelfNumber" ColumnName="ShelfNumber" />
+                <ScalarProperty Name="Condition" ColumnName="Condition" />
+                <ScalarProperty Name="RefBookID" ColumnName="RefBookID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReferenceBooks">
+            <EntityTypeMapping TypeName="LibraryModel.ReferenceBook">
+              <MappingFragment StoreEntitySet="ReferenceBooks">
+                <ScalarProperty Name="RefBookID" ColumnName="RefBookID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="CopiesTotal" ColumnName="CopiesTotal" />
+                <ScalarProperty Name="CopiesAvailable" ColumnName="CopiesAvailable" />
+                <ScalarProperty Name="CopiesOut" ColumnName="CopiesOut" />
+                <ScalarProperty Name="SubjectArea" ColumnName="SubjectArea" />
+                <ScalarProperty Name="YearOfPublication" ColumnName="YearOfPublication" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

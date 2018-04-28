@@ -1,0 +1,176 @@
+﻿/***************************************************************************************
+    Global Settings
+    author: Ollie Thomas
+
+***************************************************************************************/
+
+* {
+    border: 0px,0px,0px,0px;    /*around the edges*/
+    margin: 0px,0px,0px,0px;    /*around the outside*/
+    padding: 0px,0px,0px,0px;   /*around the inside*/
+}
+.container {
+    border: 0px,0px,0px,0px;    /*around the edges*/
+    margin: 0px,0px,0px,0px;    /*around the outside*/
+    padding: 0px,0px,0px,0px;   /*around the inside*/
+}
+.row {
+    border: 0px,0px,0px,0px;    /*around the edges*/
+    margin: 0px,0px,0px,0px;    /*around the outside*/
+    padding: 0px,0px,0px,0px;   /*around the inside*/
+}
+col-md-4 {
+    border: 0px,0px,0px,0px;    /*around the edges*/
+    margin: 0px,0px,0px,0px;    /*around the outside*/
+    padding: 0px,0px,0px,0px;   /*around the inside*/
+}
+
+* {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/***************************************************************************************
+    Fonts
+
+***************************************************************************************/
+p {font: 12px/1.5 Calabri; color: #000000;}
+h1 {font: 40px/1.5 Calabri; color: #000000;}
+
+
+
+
+
+
+
+
+
+/***************************************************************************************
+    Div Tag Area
+
+***************************************************************************************/
+body {
+    border: 0px,0px,0px,0px;    /*around the edges*/
+    margin: 0px,0px,0px,0px;    /*around the outside*/
+    padding: 0px,0px,0px,0px;
+    color: #574c3f;
+    background-color: #30344e;
+}
+ul {
+    margin: 0px,0px,0px,0px;    /*around the outside, */
+    padding: 0px,0px,0px,0px;   /*around the inside*/
+}
+#form {
+    border: 1px,1px,1px,1px, solid, black;    /*around the edges*/
+    margin: 5px,auto,0px,0;    /*around the outside*/
+    padding: 30px,20px,0px,20px;   /*around the inside*/
+    width: 100%
+}
+#headerArea {
+    border: 1px,1px,1px,1px, solid, black;   /*around the edges*/
+    margin: 5px,auto,0px,auto;    /*around the outside*/
+    padding: 30px,20px,0px,20px;   /*around the inside*/
+    width: 100%
+}
+#headerArea .container {
+    border: 1px,1px,1px,1px, solid, black;    /*around the edges*/
+    margin: 5px,auto,0px,auto;    /*around the outside*/
+    padding: 50px,50px,50px,20px;   /*around the inside*/
+    min-height: 130px;
+    border-bottom: red 8px solid;
+    width: 100%;
+    background-color: #b8bede;
+}
+#headerArea .container h2 {
+    font-family: Calibri; 
+    font-weight: normal; 
+    font-style: normal; 
+    color: #000000; 
+    font-size: 35px;
+}
+
+#bannerArea .container .banner {
+    background-position: center center;
+    background-image: url('../logo/library-books.png');
+    position: absolute; 
+    visibility: visible; 
+    display: block; 
+    overflow: hidden; 
+    text-align: center; 
+    background-repeat: no-repeat; 
+    height: 300px;
+}
+#branding .highlight, .navbar navbar-default .current a {
+    color: #FF3B05;
+    width: 100%
+}
+#branding {
+    float: left;
+    vertical-align: top;
+}
+#branding h2 {
+    color: #FFFFFF;
+    font-weight: normal;
+}
+#logo {
+    float: right;
+    vertical-align: middle;   
+}
+#banner{
+    border: 0px,0px,0px,0px;    /*around the edges*/
+    margin: 0px,0px,0px,0px;    /*around the outside*/
+    padding: 0px,0px,0px,0px;   /*around the inside*/
+
+}
+#bannerArea .container {
+    border: 1px,1px,1px,1px solid #000000;    /*around the edges*/
+    margin: 0px,0px,0px,0px;    /*around the outside*/
+    padding: 0px,0px,0px,0px;   /*around the inside*/
+    height: 210px;
+    max-height: 100px;
+    background-color: #FFFFFF; 
+    background-image: url('../logo/library-books.jpg');
+    background-repeat: no-repeat;  
+    background-size: 100%;  
+}
+#bannerArea .container .banner {
+
+}
+#navArea .container {
+    border: 0px,0px,0px,0px solid #000000;    /*around the edges*/
+    margin: 0px,0px,0px,0px;    /*around the outside*/
+    padding: 0px,0px,0px,0px;   /*around the inside*/
+    height: 40px;
+    max-height: 40px;
+    background-color: #FFFFFF;     
+}
+#mainBodyArea.container {
+    border: 0px,0px,0px,0px;    /*around the edges*/
+    margin: 0px,0px,0px,0px;    /*around the outside*/
+    padding: 20px,0px,0px,0px;   /*around the inside*/
+    min-height: 130px;
+    background-color: #FFFFFF; 
+    border-bottom: red 8px solid;
+    width: 100%;
+}
+#mainBodyArea .container .row {
+    border: 0px,0px,0px,0px, solid; /*around the edges*/
+    margin: 0px,0px,0px,2px; /*around the outside*/
+    padding: 0px,0px,0px,0px; /*around the inside*/
+}
+#footerArea .container {
+    border: 0px,0px,0px,0px;    /*around the edges, top, right, bottom, left*/
+    margin: 0px,0px,0px,2px;    /*around the outside*/
+    padding: 0px,0px,0px,0px;   /*around the inside*/
+    border-top: red 8px solid;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 5px #808080;
+    
+}
+#footerArea .container .row {
+    border: 1px,1px,1px,1px, solid, black;    /*around the edges*/
+    margin: 0px,2px,0px,2px;    /*around the outside*/
+    padding: 0px,0px,0px,0px;   /*around the inside*/
+    box-shadow: 0px 2px 5px black; 
+}
+

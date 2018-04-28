@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c49d81a655fe4c48a23a5689f8014132" Name="Diagram1">
+        <EntityTypeShape EntityType="LibraryModel.BookNumber" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Book" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.ConferenceProceeding" Width="1.5" PointX="10.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.ConferenceProCopy" Width="1.5" PointX="13" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.DVDNumber" Width="1.5" PointX="8" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.DVD" Width="1.5" PointX="5.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Item" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.JournalNumber" Width="1.5" PointX="10" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Journal" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.LibraryMember" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.MemberHistory" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Order" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Publisher" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.ReferenceBookCopy" Width="1.5" PointX="8" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.ReferenceBook" Width="1.5" PointX="5.75" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="LibraryModel.FK__MemberHist__ISBN__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Books_Publisher_PublisherID" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK__Conferenc__Confe__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK__DVDNumber__DVDID__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK__MemberHis__Items__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK__JournalNu__Journ__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK__MemberHis__Membe__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK__Reference__RefBo__68487DD7" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
