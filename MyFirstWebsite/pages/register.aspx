@@ -18,7 +18,7 @@
         <section id="headerArea">
             <div class="container"> 
                 <div id="branding">
-                    <h2><span class="float-left">Library Application Login</span></h2>
+                    <h2><span class="float-left">Library Application Registration Page</span></h2>
                 </div>
 
                 <div id="logo">

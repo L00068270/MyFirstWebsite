@@ -14,14 +14,14 @@
     <link href="../css-bootstrap/bootstrap.css" rel="stylesheet" />
     <meta http-equiv="content-type" content="text/html; charset=ISO-8889-1" />
     <link href="../Styles/login.css" rel="stylesheet">
-    <title>Login</title>
+    <title>Master Page</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <section id="headerArea">
             <div class="container"> 
                 <div id="branding">
-                    <h2><span class="float-left">Library Application Login</span></h2>
+                    <h2><span class="float-left">Library Application Master Page</span></h2>
                 </div>
 
                 <div id="logo">
@@ -66,44 +66,17 @@
         <section id="mainBodyArea">
             <div class="container" style="background-color: #FFFFFF">                                   
                 <div class="row">
-                    <div class="col-sm-4"style="background-color: #FFFFFF"></div>
+                    <div class="col-sm-4"style="background-color: #FFFFFF">
+                        This is the Master Page
+                    </div>
                  
                     
                         
-                    <div class="col-sm-4"style="background-color: #FFFFFF">                             
-                        <Table class="table-hover table-bordered" style="padding: 3px; background-position: center; width:100%;">
-                            <tr>
-                                <td><asp:Label ID="lblUsername" runat="server" Font-Names="Calibri" Text="Username"></asp:Label></td>
-                                <td><asp:TextBox ID="tbxUsername" runat="server"></asp:TextBox></td>
-                            </tr>
-                            <tr>
-                                <td><asp:Label ID="lblPassword" runat="server" Font-Names="Calibri" Text="Password"></asp:Label></td>
-                                <td><asp:TextBox ID="tbxPassword" runat="server" TextMode="Password"></asp:TextBox></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" OnClientClick="return confirm('Do you want to log in')" Text="Login"
-                                CssClass="btn btn-seccess" /></td>
-                            </tr>
-                        </Table>                               
-                        <br />
-                        <br />
-                        <br />
-                    
-                        <asp:Label ID="lblMsg" runat="server" Font-Names="Calibri" Font-Size="Medium"></asp:Label>                       
-                            <asp:SqlDataSource
-                                ID="SqlDataSource1"
-                                runat="server"
-                                ConnectionString="<%$ ConnectionStrings:Library %>"
-                                SelectCommand="SELECT [Username], [Password] FROM [LibraryMember]">
-                            </asp:SqlDataSource>                                             
-                    </div>
+                    <div class="col-sm-4"style="background-color: #FFFFFF"></div>
 
 
                        
-                    <div class="col-sm-4"style="background-color: #FFFFFF">
-                            
-                    </div>                   
+                    <div class="col-sm-4"style="background-color: #FFFFFF"></div>                   
                 </div>
             </div>           
         </section>
