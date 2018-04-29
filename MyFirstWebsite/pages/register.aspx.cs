@@ -17,14 +17,17 @@ namespace MyFirstWebsite.pages
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LibraryConnectionString"].ConnectionString);
         SqlConnection cmd = new SqlConnection();
         /*SqlDataReader dr = null;*/
+        
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
+            Response.Write("Button Click");
             Boolean useravailable;
             useravailable = checkusername(tbxUsername.Text);
             if (useravailable)
@@ -52,7 +55,6 @@ namespace MyFirstWebsite.pages
                     tbxCounty.Text = "";
                     tbxCountry.Text = "";
                     tbxPostcode.Text = "";
-                    tbxClassification.Text = "";
                 }
                 else
                 {
@@ -61,7 +63,7 @@ namespace MyFirstWebsite.pages
             }
             else
             {
-                lblUsernameNotAvailable.Text = "UserName Not Available";
+                lblUsernameNotAvailable.Text = "Username not available";
             }
 
         }
