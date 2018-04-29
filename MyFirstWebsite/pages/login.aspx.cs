@@ -18,9 +18,8 @@ namespace MyFirstWebsite.pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
+            
+        }       
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             cmd = new SqlCommand("SELECT Password from LibraryMember where Username='" + tbxUsername.Text + "'", con);
@@ -35,7 +34,7 @@ namespace MyFirstWebsite.pages
                     //lblMsg.Text = "You Have Successfully Logged In"; 
                     //lblMsg.ForeColor=System.Drawing.Color.Green;
                     Response.Redirect("~/Pages/members.aspx");
-                    flag = true;
+                    flag = true;          
                 }
             }
             if (!false)
@@ -43,8 +42,7 @@ namespace MyFirstWebsite.pages
                 lblMsg.Text = "Username or Password is Incorrect, Try Again";
                 lblMsg.ForeColor = System.Drawing.Color.Red;
             }
-            con.Close();
-
+            con.Close();         
         }
     }
 }

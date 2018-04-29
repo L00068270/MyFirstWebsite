@@ -75,11 +75,15 @@
                         <Table class="table-hover table-bordered" style="padding: 3px; background-position: center; width:100%;">
                             <tr>
                                 <td><asp:Label ID="lblUsername" runat="server" Font-Names="Calibri" Text="Username"></asp:Label></td>
-                                <td><asp:TextBox ID="tbxUsername" runat="server"></asp:TextBox></td>
+                                <td><asp:TextBox ID="tbxUsername" runat="server" 
+                                    ToolTip="Please enter username" 
+                                    OnInit="Page_Load"></asp:TextBox></td>
                             </tr>
                             <tr>
                                 <td><asp:Label ID="lblPassword" runat="server" Font-Names="Calibri" Text="Password"></asp:Label></td>
-                                <td><asp:TextBox ID="tbxPassword" runat="server" TextMode="Password"></asp:TextBox></td>
+                                <td><asp:TextBox ID="tbxPassword" runat="server" TextMode="Password" 
+                                    ToolTip="Please enter password" 
+                                    OnInit="Page_Load"></asp:TextBox></td>
                             </tr>
                             <tr>
                                 <td></td>
