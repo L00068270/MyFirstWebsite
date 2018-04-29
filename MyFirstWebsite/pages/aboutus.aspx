@@ -69,6 +69,18 @@
                 <div class="row">
                     <div class="col-sm-4"style="background-color: #FFFFFF">
                         <h2>About Us</h2>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />         
                     </div>
                  
                     

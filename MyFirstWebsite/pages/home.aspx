@@ -70,6 +70,18 @@
                     <div class="col-sm-4"style="background-color: #FFFFFF">
                         <h2>Home Page
                             index/html
+                            <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />         
                         </h2>
                     </div>
                  

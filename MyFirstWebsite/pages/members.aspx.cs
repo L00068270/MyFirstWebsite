@@ -11,15 +11,15 @@ namespace MyFirstCsharpWebsite.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*if (Session["username"] != null)
+            if (Session["username"] != null)
             {
-                Label1.Text = "Welcome, " + Session["Username"];
+                lblWelcome.Text = "Welcome, " + Session["Username"];
             }
             else
             {
                 Response.Redirect("~/Pages/login.aspx");
             }
-            */
+            
         }
     }
 }

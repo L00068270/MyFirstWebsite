@@ -68,7 +68,19 @@
             <div class="container" style="background-color: #FFFFFF">                                   
                 <div class="row">
                     <div class="col-sm-4"style="background-color: #FFFFFF">
-                        <h2>Welcome to the Members Page. You have logged In Succcessfully</h2>
+                        <asp:Label ID="lblWelcome" runat="server"></asp:Label>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />                       
                     </div>
                  
                     
