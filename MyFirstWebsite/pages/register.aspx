@@ -43,14 +43,10 @@
                 <div id="navBar">
                     <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
                         <Items>
-                            <asp:MenuItem NavigateUrl="~/pages/home.aspx" Text="HOME" Value="home">
-                            </asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/aboutus.aspx" Text="ABOUT US" 
-                                Value="aboutus"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/reports.aspx" Text="REPORTS" Value="reports">
-                            </asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/register.aspx" Text="REGISTER" 
-                                Value="register"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/pages/home.aspx" Text="HOME" Value="home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/pages/aboutus.aspx" Text="ABOUT US" Value="aboutus"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/pages/resources.aspx" Text="RESOURCES" Value="resources"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/pages/register.aspx" Text="REGISTER" Value="register"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/pages/login.aspx" Text="LOGIN" Value="login">
                             </asp:MenuItem>
                         </Items>

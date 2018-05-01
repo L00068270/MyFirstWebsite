@@ -1,8 +1,8 @@
 ﻿<%@ Page 
     Language="C#" 
     AutoEventWireup="true" 
-    CodeBehind="aboutus.aspx.cs" 
-    Inherits="MyFirstWebsite.pages.aboutus" %>
+    CodeBehind="resources.aspx.cs" 
+    Inherits="MyFirstWebsite.pages.reports" %>
 
 <!DOCTYPE html>
 
@@ -15,14 +15,14 @@
     <link href="../css-bootstrap/bootstrap.css" rel="stylesheet" />
     <meta http-equiv="content-type" content="text/html; charset=ISO-8889-1" />
     <link href="../Styles/login.css" rel="stylesheet">
-    <title>Abouit Us</title>
+    <title>Resources</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <section id="headerArea">
             <div class="container"> 
                 <div id="branding">
-                    <h2><span class="float-left">About Us</span></h2>
+                    <h2><span class="float-left">Other Resources</span></h2>
                 </div>
 
                 <div id="logo">
@@ -64,7 +64,7 @@
             <div class="container" style="background-color: #FFFFFF">                                   
                 <div class="row">
                     <div class="col-sm-4"style="background-color: #FFFFFF">
-                        <h2>About Us</h2>
+                        <h2>Resources</h2>
                         <p style="font-size: 12px">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                             Nulla quis diam. Sed ut perspiciatis unde omnis iste natus 
                             error sit voluptatem accusantium doloremque laudantium, totam 
@@ -84,7 +84,7 @@
                     
                         
                     <div class="col-sm-4"style="background-color: #FFFFFF;">
-                        <p style="color: #FF3300">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                        <p style="color: #00FF00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                             Nulla quis diam. Sed ut perspiciatis unde omnis iste natus 
                             error sit voluptatem accusantium doloremque laudantium, totam 
                             rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
@@ -122,7 +122,8 @@
                     </div>                   
                 </div>
             </div> 
-        </section>          
+        </section>  
+
         <section id="footerArea">
             <div class="container">
                 <div class="row">

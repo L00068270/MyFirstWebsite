@@ -188,6 +188,7 @@
     <Content Include="Library.edmx.diagram">
       <DependentUpon>Library.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\test.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -199,7 +200,8 @@
     <Content Include="pages\home.aspx" />
     <Content Include="pages\members.aspx" />
     <Content Include="pages\register.aspx" />
-    <Content Include="pages\reports.aspx" />
+    <Content Include="pages\resources.aspx" />
+    <Content Include="pages\WebForm1.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="styles\login.css" />
@@ -299,12 +301,19 @@
     <Compile Include="pages\register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\reports.aspx.cs">
-      <DependentUpon>reports.aspx</DependentUpon>
+    <Compile Include="pages\resources.aspx.cs">
+      <DependentUpon>resources.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\reports.aspx.designer.cs">
-      <DependentUpon>reports.aspx</DependentUpon>
+    <Compile Include="pages\resources.aspx.designer.cs">
+      <DependentUpon>resources.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Publisher.cs">

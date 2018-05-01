@@ -47,14 +47,10 @@
                 <div id="navBar">
                     <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
                         <Items>
-                            <asp:MenuItem NavigateUrl="~/pages/home.aspx" Text="HOME" Value="home">
-                            </asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/aboutus.aspx" Text="ABOUT US" 
-                                Value="aboutus"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/reports.aspx" Text="REPORTS" Value="reports">
-                            </asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/register.aspx" Text="REGISTER" 
-                                Value="register"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/pages/home.aspx" Text="HOME" Value="home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/pages/aboutus.aspx" Text="ABOUT US" Value="aboutus"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/pages/resources.aspx" Text="RESOURCES" Value="resources"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/pages/register.aspx" Text="REGISTER" Value="register"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/pages/login.aspx" Text="LOGIN" Value="login">
                             </asp:MenuItem>
                         </Items>
@@ -67,31 +63,63 @@
         <section id="mainBodyArea">
             <div class="container" style="background-color: #FFFFFF">                                   
                 <div class="row">
-                    <div class="col-sm-4"style="background-color: #FFFFFF">
-                        <h2>Home Page
-                            index/html
-                            <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />         
-                        </h2>
+                    <div class="col-md-4"style="background-color: #FFFFFF">
+                        <h2>Home Page</h2>
+                        <p style="font-size: 12px">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                            Nulla quis diam. Sed ut perspiciatis unde omnis iste natus 
+                            error sit voluptatem accusantium doloremque laudantium, totam 
+                            rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
+                            architecto beatae vitae dicta sunt explicabo. In dapibus augue non sapien. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                            cillum dolore eu fugiat nulla pariatur. Etiam dui sem, fermentum 
+                            vitae, sagittis id, malesuada in, quam. In enim a arcu imperdiet 
+                            malesuada. Cras elementum. Integer imperdiet lectus quis justo. 
+                            Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus 
+                            libero, eget facilisis enim ipsum id lacus. Integer rutrum, orci 
+                            vestibulum ullamcorper ultricies, lacus quam ultricies odio, 
+                            vitae placerat pede sem sit amet enim. Suspendisse sagittis 
+                            ultrices augue. Nulla est. Vivamus luctus egestas leo.</p>
                     </div>
                  
                     
                         
-                    <div class="col-sm-4"style="background-color: #FFFFFF"></div>
+                    <div class="col-md-4"style="background-color: #FFFFFF;">
+                        <p style="color: #3366FF">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                            Nulla quis diam. Sed ut perspiciatis unde omnis iste natus 
+                            error sit voluptatem accusantium doloremque laudantium, totam 
+                            rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
+                            architecto beatae vitae dicta sunt explicabo. In dapibus augue non sapien. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                            cillum dolore eu fugiat nulla pariatur. Etiam dui sem, fermentum 
+                            vitae, sagittis id, malesuada in, quam. In enim a arcu imperdiet 
+                            malesuada. Cras elementum. Integer imperdiet lectus quis justo. 
+                            Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus 
+                            libero, eget facilisis enim ipsum id lacus. Integer rutrum, orci 
+                            vestibulum ullamcorper ultricies, lacus quam ultricies odio, 
+                            vitae placerat pede sem sit amet enim. Suspendisse sagittis 
+                            ultrices augue. Nulla est. Vivamus luctus egestas leo.</p>
+                    </div>
 
 
                        
-                    <div class="col-sm-4"style="background-color: #FFFFFF"></div>                   
+                    <div class="col-md-4"style="background-color: #FFFFFF">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                            Nulla quis diam. Sed ut perspiciatis unde omnis iste natus 
+                            error sit voluptatem accusantium doloremque laudantium, totam 
+                            rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
+                            architecto beatae vitae dicta sunt explicabo. In dapibus augue non sapien. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                            cillum dolore eu fugiat nulla pariatur. Etiam dui sem, fermentum 
+                            vitae, sagittis id, malesuada in, quam. In enim a arcu imperdiet 
+                            malesuada. Cras elementum. Integer imperdiet lectus quis justo. 
+                            Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus 
+                            libero, eget facilisis enim ipsum id lacus. Integer rutrum, orci 
+                            vestibulum ullamcorper ultricies, lacus quam ultricies odio, 
+                            vitae placerat pede sem sit amet enim. Suspendisse sagittis 
+                            ultrices augue. Nulla est. Vivamus luctus egestas leo.</p>
+                        
+                          
+                    </div>                   
                 </div>
             </div>           
         </section>
