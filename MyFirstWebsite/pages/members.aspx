@@ -21,8 +21,8 @@
     <form id="form1" runat="server">
         <section id="headerArea">
             <div class="container"> 
-                <div id="branding">
-                    <h2><span class="float-left">Library Application Members Page</span></h2>
+                <div id="branding" style="position: absolute">
+                    <h2><span class="float-left">Library Application</span></h2>
                 </div>
 
                 <div id="logo">
@@ -34,28 +34,33 @@
         </section>
 
 
+
+        <section id="navArea">
+            <div class="container">
+                <div id="navBar">
+                    <span class="float-right">
+                        <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/pages/home.aspx" Text="HOME" Value="home"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/pages/aboutus.aspx" Text="ABOUT US" Value="aboutus"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/pages/resources.aspx" Text="RESOURCES" Value="resources"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/pages/register.aspx" Text="REGISTER" Value="register"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/pages/login.aspx" Text="LOGIN" Value="login">
+                                </asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </span>
+                </div>                
+            </div>
+        </section>
+   
+
+
         <section id="bannerArea">
             <div class="container">
                 <div class="banner">
                     
                 </div>               
-            </div>
-        </section>
-
-        <section id="navArea">
-            <div class="container">
-                <div id="navBar">
-                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
-                        <Items>
-                            <asp:MenuItem NavigateUrl="~/pages/home.aspx" Text="HOME" Value="home"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/aboutus.aspx" Text="ABOUT US" Value="aboutus"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/resources.aspx" Text="RESOURCES" Value="resources"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/register.aspx" Text="REGISTER" Value="register"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/login.aspx" Text="LOGIN" Value="login">
-                            </asp:MenuItem>
-                        </Items>
-                    </asp:Menu>
-                </div>                
             </div>
         </section>
             

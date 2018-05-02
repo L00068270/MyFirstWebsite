@@ -15,13 +15,13 @@
     <link href="../css-bootstrap/bootstrap.css" rel="stylesheet" />
     <meta http-equiv="content-type" content="text/html; charset=ISO-8889-1" />
     <link href="../Styles/login.css" rel="stylesheet">
-    <title>Abouit Us</title>
+    <title>About Us</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <section id="headerArea">
             <div class="container"> 
-                <div id="branding">
+                <div id="branding" style="position: absolute">
                     <h2><span class="float-left">About Us</span></h2>
                 </div>
 
@@ -34,28 +34,33 @@
         </section>
 
 
+
+        <section id="navArea">
+            <div class="container">
+                <div id="navBar">
+                    <span class="float-right">
+                        <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/pages/home.aspx" Text="HOME" Value="home"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/pages/aboutus.aspx" Text="ABOUT US" Value="aboutus"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/pages/resources.aspx" Text="RESOURCES" Value="resources"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/pages/register.aspx" Text="REGISTER" Value="register"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/pages/login.aspx" Text="LOGIN" Value="login">
+                                </asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </span>
+                </div>                
+            </div>
+        </section>
+   
+
+
         <section id="bannerArea">
             <div class="container">
                 <div class="banner">
                     
                 </div>               
-            </div>
-        </section>
-
-        <section id="navArea">
-            <div class="container">
-                <div id="navBar">
-                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
-                        <Items>
-                            <asp:MenuItem NavigateUrl="~/pages/home.aspx" Text="HOME" Value="home"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/aboutus.aspx" Text="ABOUT US" Value="aboutus"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/resources.aspx" Text="RESOURCES" Value="resources"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/register.aspx" Text="REGISTER" Value="register"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/pages/login.aspx" Text="LOGIN" Value="login">
-                            </asp:MenuItem>
-                        </Items>
-                    </asp:Menu>
-                </div>                
             </div>
         </section>
             
@@ -64,8 +69,7 @@
             <div class="container" style="background-color: #FFFFFF">                                   
                 <div class="row">
                     <div class="col-sm-4"style="background-color: #FFFFFF">
-                        <h2>About Us</h2>
-                        <p style="font-size: 12px">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                        <p style="font-size: 12px; padding-top: 20px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                             Nulla quis diam. Sed ut perspiciatis unde omnis iste natus 
                             error sit voluptatem accusantium doloremque laudantium, totam 
                             rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
@@ -84,7 +88,7 @@
                     
                         
                     <div class="col-sm-4"style="background-color: #FFFFFF;">
-                        <p style="color: #FF3300">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                        <p style="color: #FF3300; padding-top: 20px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                             Nulla quis diam. Sed ut perspiciatis unde omnis iste natus 
                             error sit voluptatem accusantium doloremque laudantium, totam 
                             rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
@@ -103,7 +107,7 @@
 
                        
                     <div class="col-sm-4"style="background-color: #FFFFFF">
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                        <p style="padding-top: 20px">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                             Nulla quis diam. Sed ut perspiciatis unde omnis iste natus 
                             error sit voluptatem accusantium doloremque laudantium, totam 
                             rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
