@@ -1,4 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="MyFirstWebsite.pages.register" %>
+﻿<%@ Page 
+    Language="C#" 
+    AutoEventWireup="true" 
+    CodeBehind="register.aspx.cs" 
+    Inherits="MyFirstWebsite.pages.register" %>
 
 <!DOCTYPE html>
 
@@ -18,7 +22,7 @@
         <section id="headerArea">
             <div class="container"> 
                 <div id="branding" style="position: absolute">
-                    <h2><span class="float-left">Library Application</span></h2>
+                    <h2><span class="float-left">Regristration</span></h2>
                 </div>
 
                 <div id="logo">
@@ -71,60 +75,60 @@
                     <div class="col-sm-4"style="background-color: #FFFFFF; padding-top: 60px;">                         
                         <Table class="table-hover table-bordered" 
                             style="padding: 5px 3px 3px 3px; background-position: center; width:100%;">  
-                        <tr>
-                            <td><asp:Label ID="lblNameFirst" runat="server" Font-Names="Calibri" Text="First Name"></asp:Label></td>
-                            <td><asp:TextBox ID="tbxNameFirst" runat="server"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                            <td><asp:Label ID="lblNameInitial" runat="server" Font-Names="Calibri" Text="Initials"></asp:Label></td>
-                            <td><asp:TextBox ID="tbxNameInitial" runat="server"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                            <td><asp:Label ID="lblNameLast" runat="server" Font-Names="Calibri" Text="Last Name"></asp:Label></td>
-                            <td><asp:TextBox ID="tbxNameLast" runat="server"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                            <td><asp:Label ID="lblUsername" runat="server" Font-Names="Calibri" Text="Username"></asp:Label></td>
-                            <td><asp:TextBox ID="tbxUsername" runat="server"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                            <td><asp:Label ID="lblPassword" runat="server" Font-Names="Calibri" Text="Password"></asp:Label></td>
-                            <td><asp:TextBox ID="tbxPassword" runat="server" TextMode="Password"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                            <td><asp:Label ID="lblConfirmPassword" runat="server" Font-Names="Calibri" Text="Confirm Password"></asp:Label></td>
-                            <td><asp:TextBox ID="tbxConfirmPassword" runat="server" TextMode="Password"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                            <td><asp:Label ID="lblAddress" runat="server" Font-Names="Calibri" Text="Address"></asp:Label></td>
-                            <td><asp:TextBox ID="tbxAddress" runat="server"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                            <td><asp:Label ID="lblStreet" runat="server" Font-Names="Calibri" Text="Street"></asp:Label></td>
-                            <td><asp:TextBox ID="tbxStreet" runat="server"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                            <td><asp:Label ID="lblTown" runat="server" Font-Names="Calibri" Text="Town"></asp:Label></td>
-                            <td><asp:TextBox ID="tbxTown" runat="server"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                            <td><asp:Label ID="lblCounty" runat="server" Font-Names="Calibri" Text="County"></asp:Label></td>
-                            <td><asp:TextBox ID="tbxCounty" runat="server"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                            <td><asp:Label ID="lblCountry" runat="server" Font-Names="Calibri" Text="Country"></asp:Label></td>
-                            <td><asp:TextBox ID="tbxCountry" runat="server"></asp:TextBox></td>
-                        </tr>
-                        <tr>
-                            <td><asp:Label ID="lblPostcode" runat="server" Font-Names="Calibri" Text="Postcode"></asp:Label></td>
-                            <td><asp:TextBox ID="tbxPostcode" runat="server"></asp:TextBox></td>
-                        </tr>
+                            <tr>
+                                <td><asp:Label ID="lblNameFirst" runat="server" Font-Names="Calibri" Text="First Name"></asp:Label></td>
+                                <td><asp:TextBox ID="tbxNameFirst" runat="server"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                                <td><asp:Label ID="lblNameInitial" runat="server" Font-Names="Calibri" Text="Initials"></asp:Label></td>
+                                <td><asp:TextBox ID="tbxNameInitial" runat="server"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                                <td><asp:Label ID="lblNameLast" runat="server" Font-Names="Calibri" Text="Last Name"></asp:Label></td>
+                                <td><asp:TextBox ID="tbxNameLast" runat="server"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                                <td><asp:Label ID="lblUsername" runat="server" Font-Names="Calibri" Text="Username"></asp:Label></td>
+                                <td><asp:TextBox ID="tbxUsername" runat="server"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                                <td><asp:Label ID="lblPassword" runat="server" Font-Names="Calibri" Text="Password"></asp:Label></td>
+                                <td><asp:TextBox ID="tbxPassword" runat="server" TextMode="Password"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                                <td><asp:Label ID="lblConfirmPassword" runat="server" Font-Names="Calibri" Text="Confirm Password"></asp:Label></td>
+                                <td><asp:TextBox ID="tbxConfirmPassword" runat="server" TextMode="Password"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                                <td><asp:Label ID="lblAddress" runat="server" Font-Names="Calibri" Text="Address"></asp:Label></td>
+                                <td><asp:TextBox ID="tbxAddress" runat="server"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                                <td><asp:Label ID="lblStreet" runat="server" Font-Names="Calibri" Text="Street"></asp:Label></td>
+                                <td><asp:TextBox ID="tbxStreet" runat="server"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                                <td><asp:Label ID="lblTown" runat="server" Font-Names="Calibri" Text="Town"></asp:Label></td>
+                                <td><asp:TextBox ID="tbxTown" runat="server"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                                <td><asp:Label ID="lblCounty" runat="server" Font-Names="Calibri" Text="County"></asp:Label></td>
+                                <td><asp:TextBox ID="tbxCounty" runat="server"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                                <td><asp:Label ID="lblCountry" runat="server" Font-Names="Calibri" Text="Country"></asp:Label></td>
+                                <td><asp:TextBox ID="tbxCountry" runat="server"></asp:TextBox></td>
+                            </tr>
+                            <tr>
+                                <td><asp:Label ID="lblPostcode" runat="server" Font-Names="Calibri" Text="Postcode"></asp:Label></td>
+                                <td><asp:TextBox ID="tbxPostcode" runat="server"></asp:TextBox></td>
+                            </tr>
                         
-                        <tr>
-                            <td></td>
-                            <td><asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register"
-                            CssClass="btn btn-seccess red" /></td>
-                        </tr>
+                            <tr>
+                                <td></td>
+                                <td><asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register"
+                                CssClass="btn btn-seccess red" /></td>
+                            </tr>
                     </table>                       
                         <br />
                         <br />

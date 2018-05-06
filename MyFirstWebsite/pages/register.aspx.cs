@@ -14,6 +14,7 @@ namespace MyFirstWebsite.pages
 {
     public partial class register : System.Web.UI.Page
     {
+        /*Connect to Database, the SqlConnection class makes the connection with the database*/
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LibraryConnectionString"].ConnectionString);
         SqlConnection cmd = new SqlConnection();
         /*SqlDataReader dr = null;*/
@@ -29,13 +30,15 @@ namespace MyFirstWebsite.pages
         {
             Response.Write("Button Click");
             Boolean useravailable;
+            /*call checkusername and check contents of tbxUsername against it*/
             useravailable = checkusername(tbxUsername.Text);
             if (useravailable)
             {
+                /*check if pasword and re-entered password match*/
                 if (tbxPassword.Text == tbxConfirmPassword.Text)
                 {
+                    /*inputting to Database*/
                     String query = "insert into LibraryMember(NameFirst,NameInitial,NameLast,Username,Password,Address,Street,Town,County,Country,Postcode) values('" + tbxNameFirst.Text + "','" + tbxNameInitial.Text + "','" + tbxNameLast.Text + "','" + tbxUsername.Text + "','" + tbxPassword.Text + "','" + tbxAddress.Text + "','" + tbxStreet.Text + "','" + tbxTown.Text + "','" + tbxCounty.Text + "','" + tbxCountry.Text + "','" + tbxPostcode.Text + "')";
-                    //String mycon = "Data Source=LibraryConnectionString; Initial Catalog=SignupDatabase; Integrated Security=true";
                     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LibraryConnectionString"].ConnectionString);
                     con.Open();
                     SqlCommand cmd = new SqlCommand();
@@ -58,20 +61,23 @@ namespace MyFirstWebsite.pages
                 }
                 else
                 {
+                    /*output toscreen if the paswords bo not match*/
                     lblReEnter.Text = "Password and Confirm Password Not Matched - ReEnter Password";
                 }
             }
             else
             {
+                /*output to screen if the username is already taken*/
                 lblUsernameNotAvailable.Text = "Username not available";
             }
 
         }
+        /*this is called to checks the username against the database*/
         public Boolean checkusername(String username)
         {
             Boolean userstatus;
-            //String mycon = "Data Source=LibraryConnectionString; Initial Catalog=SignupDatabase; Integrated Security=True";
             String myquery = "Select * from LibraryMember where username='" + tbxUsername.Text + "'";
+            /*Connect to database*/
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LibraryConnectionString"].ConnectionString);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = myquery;

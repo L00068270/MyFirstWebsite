@@ -136,11 +136,11 @@ ul {
 
 }
 #navArea .container {
-    border: 0px,0px,0px,0px solid #000000;    /*around the edges*/
-    margin: 0px,0px,0px,0px;    /*around the outside*/
-    padding: 0px,0px,0px,0px;   /*around the inside*/
-    height: 40px;
-    max-height: 30px;
+    /*around the edges*/
+    /*around the outside*/
+    /*around the inside*/
+    height: 60px;
+    max-height: 200px;
     background-color: #FFFFFF;     
 }
 #mainBodyArea.container {

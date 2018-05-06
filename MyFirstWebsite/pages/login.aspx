@@ -68,11 +68,11 @@
         <section id="mainBodyArea">
             <div class="container" style="background-color: #FFFFFF">                                   
                 <div class="row">
-                    <div class="col-sm-4"style="background-color: #FFFFFF"></div>
+                    <div class="col-md-4"style="background-color: #FFFFFF"></div>
                  
                     
                         
-                    <div class="col-sm-4"style="background-color: #FFFFFF; padding-top: 60px;">                             
+                    <div class="col-md-4"style="background-color: #FFFFFF; padding-top: 60px;">                             
                         <Table class="table-hover table-bordered" 
                             style="padding: 5px 3px 3px 3px; background-position: center; width:100%;">
                             <tr>
@@ -103,7 +103,7 @@
 
 
                        
-                    <div class="col-sm-4"style="background-color: #FFFFFF">
+                    <div class="col-md-4"style="background-color: #FFFFFF">
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                             ConnectionString="<%$ ConnectionStrings:LibraryConnectionString %>" 
                             SelectCommand="SELECT [Username], [Password] FROM [LibraryMember]"></asp:SqlDataSource>

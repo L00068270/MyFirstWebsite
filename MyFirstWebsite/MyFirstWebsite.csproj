@@ -133,9 +133,6 @@
     <Content Include="css\bootstrap-reboot.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
-    <Content Include="images\bg-education-library.jpg" />
-    <Content Include="images\capita_lms_image2.jpg" />
-    <Content Include="images\MyBanner.png" />
     <Content Include="images\Untitled-1.png" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.min.js" />
@@ -159,7 +156,6 @@
     <Content Include="logo\._LYIT LOGO.png" />
     <Content Include="logo\._LYIT-LOGO1.jpg" />
     <Content Include="logo\._Untitled-1.png" />
-    <Content Include="logo\capita_lms_image2.jpg" />
     <Content Include="logo\finley-library-books.jpg" />
     <Content Include="logo\library-books.jpg" />
     <Content Include="logo\library-books.png" />
@@ -198,6 +194,8 @@
     <Content Include="logo\LibraryLogo.psd" />
     <Content Include="logo\LYIT LOGO.psd" />
     <Content Include="logo\Untitled-1.psd" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
     <EntityDeploy Include="Library.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Library.Designer.cs</LastGenOutput>
@@ -341,6 +339,20 @@
     </Compile>
     <Compile Include="ReferenceBookCopy.cs">
       <DependentUpon>Library.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
